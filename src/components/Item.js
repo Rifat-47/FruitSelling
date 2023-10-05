@@ -1,15 +1,16 @@
 import React from 'react'
-
-const Item = () => {
+import Img from "./../../src/static/images/demo.jpg"
+const Item = (props) => {
+  const { text } = props;
   return (
-    <div className='item-container'>
-        <div className='img-container'>
-            <img src=""></img>
-        </div>
-        <div className='heading'></div>
-        <div className='subheading'></div>
-        <div className='description'></div>
-    </div>
+    <li className='item-container'>
+      <div className='img-container'>
+        <img src={Img}></img>
+      </div>
+      <div className='heading'>Jackfruit</div>
+      <div className='subheading'>Location: Dhaka</div>
+      <div className='description'>{text}</div>
+    </li>
   )
 }
 
